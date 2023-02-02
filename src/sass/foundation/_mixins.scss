@@ -1,0 +1,67 @@
+/*=============================================
+=                   Mixins                     =
+=============================================*/
+
+/**
+ *
+ * Helpful reusable function-like thing that the will be to implement
+ * styles for components
+ */
+
+/*=============================================
+ =                  Break points                =
+ =============================================*/
+
+//  @mixin respond($breakpoint) {
+//     @if $breakpoint == phone {
+//          @media (max-width : 576px){ @content}
+//         }
+//     @if $breakpoint == tab-port {
+//          @media (min-width : 576px) and (max-width : 768px) { @content}
+//         }
+//     @if $breakpoint == desktop {
+//         @media (min-width : 768px) and (max-width : 991px) { @content}
+//              }
+//     @if $breakpoint == large-desktop {
+//         @media (min-width : 991px) and (max-width : 1199px) { @content}
+//     }
+//     @if $breakpoint == xlarge-desktop {
+//         @media (min-width : 1200px) and (max-width : 1399px){ @content}
+//     }
+//     @if $breakpoint == xxlarge-desktop {
+//         @media (min-width : 1400px){ @content} }
+//     }
+
+@mixin tablet {
+  @media (min-width: map-get($breakpoint , "md")) {
+    @content;
+  }
+}
+@mixin loptop {
+  @media (min-width: map-get($breakpoint , "lg")) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: map-get($breakpoint , "xl")) {
+    @content;
+  }
+}
+
+/*
+Example :
+body {
+  font-size: 12px;
+
+  @include tablet {
+    font-size: 14px;
+  }
+  @include loptop {
+    font-size: 16px;
+  }
+  @include desktop {
+    font-size: 14px;
+  }
+}
+*/
+
