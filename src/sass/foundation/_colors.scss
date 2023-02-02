@@ -1,11 +1,12 @@
 /*=============================================
 =            Colors                            =
 =============================================*/
+
 /*=============================================
-=                        Body color            =
+=               Global color                   =
 =============================================*/
-$text-body-color: var(--dse-text-body-color, $dark);
-$body-bg-color: var(--dse-body-bg-color, $white);
+$text-body-color: var(--dse-text-body-color, $dark) !default;
+$body-bg-color: var(--dse-body-bg-color, $white) !default;
 
 /*=============================================
 =            Buttons                           =
